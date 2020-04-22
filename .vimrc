@@ -39,6 +39,7 @@ set background=dark
 set laststatus=2
 set showcmd
 set showmode
+set clipboard=unnamed
 
 " Reloads the file if it has been changed outside of vim.
 set autoread
