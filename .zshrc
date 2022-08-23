@@ -1,7 +1,14 @@
 # -- Aliases
+alias g="git"
+alias gl="git log"
+alias gs="git number --column -s"
+alias ga="git number add"
+alias gc="git number checkout"
+alias gd="git number diff"
+alias gr="git number reset"
+alias gsh="git number show"
+alias vn="git number -c vim"
+alias grm="git number -c rm"
 alias m="npm"
 alias v="vim"
 alias mr="npm run"
-
-# -- Theme
-ZSH_THEME=af-magic
