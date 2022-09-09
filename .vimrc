@@ -1,3 +1,11 @@
+" Automatic installation of vim-plug if not already installed
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 syntax on
 
 " Variables
@@ -9,7 +17,6 @@ let NERDTreeShowHidden = 1
 
 " Visual options
 " ------------------------------------------------
-colorscheme gruvbox
 set ruler
 set relativenumber
 set number
@@ -71,4 +78,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" vim-plug
+" Default directory for plugins on macOS: ~/.vim/plugged
+call plug#begin()
+
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
+
+call plug#end()
 
