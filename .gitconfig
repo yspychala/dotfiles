@@ -2,23 +2,23 @@
         name = 
         email = 
 [alias]
-        aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
-        next = commit --no-verify --no-edit && git rebase --continue
-        co = checkout
-        st = status
-        df = diff
-        br = branch
-        ci = commit
-        last = log -1 HEAD
-        pnfw = push origin HEAD --force-with-lease --no-verify
-        pfw = push origin HEAD --force-with-lease
-        pullr = pull --rebase origin
-        ph = push origin HEAD
-        rbc = rebase --continue
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+    next = commit --no-verify --no-edit && git rebase --continue
+    co = checkout
+    st = status
+    df = diff
+    br = branch
+    ci = commit
+    last = log -1 HEAD
+    pnfw = push origin HEAD --force-with-lease --no-verify
+    pfw = push origin HEAD --force-with-lease
+    pullr = pull --rebase origin
+    ph = push origin HEAD
+    rbc = rebase --continue
 [rerere]
-        enabled = true
+    enabled = true
 [hub]
-        host = 
+    host = 
 [core]
 	excludesfile = ~/.localgitignore
 
